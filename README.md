@@ -7,9 +7,10 @@
 - vincular seu conteúdo AMP;
 - adicionar dados estruturados para mecanismos de pesquisa.
 
-#Tópicos Avançados 
+# Documentação
 
--- https://www.ampproject.org/pt_br/docs/fundamentals/add_advanced
+- Básico https://www.ampproject.org/pt_br/docs/fundamentals/converting
+- Avançado https://www.ampproject.org/pt_br/docs/fundamentals/add_advanced
 
 # accelerated-mobile-pages-foundations
 
