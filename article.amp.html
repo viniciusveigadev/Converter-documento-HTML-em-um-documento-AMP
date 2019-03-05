@@ -1,0 +1,123 @@
+<!--
+ Copyright 2016 Google Inc.
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!-- Para o teste foi usado a Extensão https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/related-->
+<!-- Já dentro do console, para entrar no ambiente de desenvolvimento insira #development=1 depois da URL -->
+<!-- Para ver se o snnipt de código possui erros: https://search.google.com/structured-data/testing-tool -->
+
+<!doctype html>
+<html amp lang="en"> <!--Ou use <html ⚡ lang="en">-->
+  <head>
+  <meta charset="utf-8" />
+  <link rel="canonical" href="/article.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"> 
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <link rel="shortcut icon" href="amp_favicon.png">
+
+  <!-- A tag <style amp-boilerplate> oculta o conteúdo do corpo até que a biblioteca JavaScript da AMP seja carregada. Em seguida, o conteúdo é renderizado. Isso acontece nas AMP para evitar a renderização de conteúdo sem estilo, também conhecida como Flash Of Unstyled Content (FOUC). Isso ajuda a garantir que a experiência do usuário seja realmente instantânea, porque o conteúdo da página é exibido de uma só vez e tudo acima da dobra é renderizado em conjunto. A segunda tag inverterá essa lógica se o JavaScript estiver desativado no navegador.-->
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <title>News Article</title>
+
+<!-- removido <link href="base.css" rel="stylesheet" /> -->
+
+<!--Se o CSS for muito grande será necessário uso de um pré-processador EX: Sass
+ O limite de tamanho de arquivo é de 50 kilobytes-->
+
+ <!--estilo in-line--> 
+  <style amp-custom> 
+  body {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: Tomato;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.5em;
+  background: white;
+  box-shadow: 0px 3px 5px grey;
+}
+
+p {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+  </style>
+
+<!--Dados Estruturados-->
+<!--Eles ajudam os mecanismos de pesquisa a entender melhor sua página da Web, além de exibir de maneira mais adequada seu conteúdo nas páginas de resultado do mecanismo de pesquisa -->
+
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":{
+     "@type":"WebPage",
+     "@id":"https://example.com/my-article.html"
+  },
+  "headline": "My First AMP Article",
+  "image": {
+     "@type": "ImageObject",
+     "url": "https://example.com/article_thumbnail1.jpg",
+     "height": 800,
+     "width": 800
+  },
+  "datePublished": "2015-02-05T08:00:00+08:00",
+  "dateModified": "2015-02-05T09:20:00+08:00",
+  "author": {
+     "@type": "Person",
+     "name": "John Doe"
+  },
+  "publisher": {
+     "@type": "Organization",
+     "name": "⚡ AMP Times",
+     "logo": {
+       "@type": "ImageObject",
+       "url": "https://example.com/amptimes_logo.jpg",
+       "width": 600,
+       "height": 60
+     }
+  },
+  "description": "My first experience in an AMPlified world"
+  }
+  </script>
+
+  </head>
+  <body>
+    <header>
+      News Site
+    </header>
+    <article>
+      <h1>Article Name</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas tortor sapien, non tristique ligula accumsan eu.</p>
+      
+      <!-- "-amp" adicionado na frente de img, é um padrão do projeto -->
+      <amp-img src="mountains.jpg" layout="responsive" width="266" height="150">
+      <!--width="266" height="150" A abordagem da AMP para o layout evita que o texto se mova, mesmo que as imagens e os anúncios demorem muito para serem carregados. -->
+      <!-- layout="responsive" Dá responsividade a tag-->
+    </article>
+  </body>
+</html>
